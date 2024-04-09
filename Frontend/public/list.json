@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "story book",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 2,
+    "name": "Sports book",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 3,
+    "name": "Action and adventure",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 4,
+    "name": "Alternate history",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 5,
+    "name": "Anthology",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 20,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 6,
+    "name": "Children's",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 7,
+    "name": "Comic book",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 8,
+    "name": "Horror",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 30,
+    "category": "Paid",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id": 9,
+    "name": "Mystery",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 50,
+    "category": "paid",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id":10,
+    "name": "Thriller",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 40,
+    "category": "paid",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  },
+  {
+    "id":11,
+    "name": "Western",
+    "title": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+    "price": 0,
+    "category": "Free",
+    "image": "https://img.freepik.com/free-photo/front-view-stacked-books-ladders-education-day_23-2149241046.jpg?t=st=1712652606~exp=1712656206~hmac=d0756537e4ca191302835e901ebcced3ea474dcb1433319a29bb1a040f846633&w=826"
+  }
+]
