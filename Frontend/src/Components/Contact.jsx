@@ -13,6 +13,7 @@ const Contact = () => {
     <>
       <div className="flex h-screen items-center justify-center">
         <div className="modal-box">
+        <form  onSubmit={handleSubmit(onSubmit)} method="dialog">
           <div className="mt-4 space-y-2">
             <h1 className="text-2xl font-bold">Contact Us</h1>
             <p>Name</p>
@@ -46,13 +47,20 @@ const Contact = () => {
               className="w-80 h-20 border rounded-md outline-non "
               type="text"
               placeholder="Type your message"
+              {...register("message", { required: true })}
             />
             <br />
+            {errors.message && (
+              <span className="text-sm text-red-500">
+                This field is required
+              </span>
+            )}
             <button className="btn btn-primary"
               onClick={() => document.getElementById("my_modal_3").showModal()}>
               Submit
             </button>
           </div>
+          </form>
         </div>
       </div>
     </>
