@@ -1,38 +1,42 @@
-import {useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 import Login from "./Login";
+import { useAuth } from "../Context/AuthProvider";
+import Logout from "./Logout";
 
 const Navbar = () => {
- const [theme, setTheme] = useState(localStorage.getItem("theme")?localStorage.getItem("theme"):"light");
- const element = document.documentElement;
+  const [authUser, setAuthUser] = useAuth();
 
- useEffect(() => {
-  if (theme === "dark") {
-    element.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    document.body.classList.add("dark");
-  } else {
-    element.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-    document.body.classList.remove("dark");
-  }
-}, [theme]);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+  const element = document.documentElement;
 
-
-
-  const [sticky, setsticky] = useState(false)
-  useEffect(()=>{
-    const handlescroll=()=>{
-    if(window.scrollY>0){
-      setsticky(true)
-    }else{
-      setsticky(false)
+  useEffect(() => {
+    if (theme === "dark") {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      document.body.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      document.body.classList.remove("dark");
     }
-  }
-    window.addEventListener("scroll",handlescroll)
-    return()=>{
-      window.removeEventListener("scroll",handlescroll)
-    }
-  },[])
+  }, [theme]);
+
+  const [sticky, setsticky] = useState(false);
+  useEffect(() => {
+    const handlescroll = () => {
+      if (window.scrollY > 0) {
+        setsticky(true);
+      } else {
+        setsticky(false);
+      }
+    };
+    window.addEventListener("scroll", handlescroll);
+    return () => {
+      window.removeEventListener("scroll", handlescroll);
+    };
+  }, []);
   const navItem = (
     <>
       <li>
@@ -97,10 +101,10 @@ const Navbar = () => {
             <div className="hidden md:block">
               <label className="px-3 py-2 border rounded-md flex items-center gap-2">
                 <input
-                 type="text"
-                 className="grow outline-none rounded-md px-1 dark:bg-slate-900 dark:text-white"
+                  type="text"
+                  className="grow outline-none rounded-md px-1 dark:bg-slate-900 dark:text-white"
                   placeholder="Search"
-                   />
+                />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -139,21 +143,26 @@ const Navbar = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-
               >
                 <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
             </label>
-            <div className="">
-              <a className=" bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
-                onClick={()=>
-                document.getElementById("my_modal_3").showModal()
-                }
+
+            {authUser ? (
+              <Logout />
+            ) : (
+              <div className="">
+                <a
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
                 >
-                Login
-              </a>
-              <Login/>
-            </div>
+                  Login
+                </a>
+                <Login />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -161,6 +170,4 @@ const Navbar = () => {
   );
 };
 
-
 export default Navbar;
-
