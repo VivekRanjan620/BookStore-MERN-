@@ -9,7 +9,7 @@ const Course = () => {
   useEffect(()=>{
     const getBook=async()=>{
       try {
-        const res = await axios.get("http://localhost:4001/book");
+        const res = await axios.get("/api/book");
         console.log(res.data);
         setBook(res.data);
       } catch (error) {
@@ -38,7 +38,7 @@ const Course = () => {
        <div className=' mt-12 grid grid-cols-1 md:grid-cols-4'>
         {
           book.map((item)=>(
-            <Cards key={item.id} item={item}/>
+            <Cards key={item._id} item={item}/>
 
           ))
         }
